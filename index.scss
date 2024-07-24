@@ -197,7 +197,7 @@
 // departments
 .departments {
     @include adaptiveValue("padding-top", 110, 32);
-    @include adaptiveValue("padding-bottom", 110, 32);
+    @include adaptiveValue("padding-bottom", 55, 16);
     // .departments__container
     &__container {
     }
@@ -265,6 +265,81 @@
 .h-32 {
     display: block;
     margin-bottom: toRem(32);
+}
+.departments__img {
+    max-width: 100%;
+    @include adaptiveValue("margin-top", 120, 64);
+    img {
+        width: 100%;
+    }
+}
+
+//========================================================================================================================================================
+
+// clients
+.clients {
+    @include adaptiveValue("padding-top", 55, 16);
+    @include adaptiveValue("padding-bottom", 110, 32);
+    // .clients__container
+    &__container {
+    }
+    // .clients__title
+    &__title {
+    }
+    // .clients__desc
+    &__desc {
+        @include adaptiveValue("margin-top", 32, 16);
+    }
+    // .clients__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        @include adaptiveValue("gap", 48, 24);
+        @include adaptiveValue("margin-top", 64, 24);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+    // .clients__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $blueColor;
+        text-align: center;
+        @include adaptiveValue("padding-top", 32, 16);
+        @include adaptiveValue("padding-bottom", 32, 16);
+        @include adaptiveValue("padding-left", 12, 24);
+        @include adaptiveValue("padding-right", 12, 24);
+    }
+    // .clients__icon
+    &__icon {
+        max-width: 100%;
+    }
+    // .clients__subtitle
+    &__subtitle {
+        margin-top: toRem(20);
+        font-size: toRem(20);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    // .clients__item-desc
+    &__item-desc {
+        margin-top: toRem(12);
+        padding-top: toRem(8);
+        text-align: center;
+        border-top: 1px solid $mainColor;
+        font-size: toRem(16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+.title {
 }
 
 //========================================================================================================================================================

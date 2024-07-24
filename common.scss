@@ -40,3 +40,98 @@ input[type="search"]:focus {
     white-space: nowrap;
     border-width: 0;
 }
+
+// next btn
+$color: #111;
+$primary: #ffab9d;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.cta {
+    position: relative;
+    margin: auto;
+    padding: toRem(18) toRem(22);
+    padding-left: toRem(0);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    @include adaptiveValue("margin-top", 64, 32);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        border-radius: 100%;
+        width: toRem(64);
+        height: toRem(64);
+        transition: all 0.3s ease;
+    }
+    span {
+        position: relative;
+        vertical-align: middle;
+        font-family: "HeliosCond";
+        font-size: toRem(24);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+    }
+    span.white {
+        color: #fff;
+    }
+    svg {
+        position: relative;
+        top: 0;
+        margin-left: toRem(20);
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: $color;
+        stroke-width: 2;
+        transform: translateX(-5px);
+        transition: all 0.3s ease;
+        stroke: #191c1c;
+        width: toRem(62);
+        height: toRem(16);
+    }
+    svg.white {
+        stroke: #fff;
+    }
+    &:hover {
+        &:before {
+            // width: 100%;
+            background: $blueColor;
+        }
+        svg {
+            transform: translateX(0);
+        }
+    }
+    &:active {
+        transform: scale(0.96);
+    }
+}
+//========================================================================================================================================================
+.title {
+    font-family: "HeliosCond";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    @include adaptiveValue("font-size", 64, 36);
+    @media (max-width: $mobile) {
+        letter-spacing: -2.16px;
+    }
+}
+
+.desc {
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @include adaptiveValue("font-size", 20, 16);
+    @media (max-width: $mobile) {
+        font-weight: 500;
+    }
+}

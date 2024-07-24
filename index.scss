@@ -1,3 +1,171 @@
 //====================================================================================================
-
+// hero
+.hero {
+    position: relative;
+    background-color: #191c1c;
+    @include adaptiveValue("padding-top", 97, 68);
+    @include adaptiveValue("min-height", 520, 428);
+    // .hero__container
+    &__container {
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    // .hero__content
+    &__content {
+        z-index: 1;
+    }
+    // .hero__title
+    &__title {
+        color: #fff;
+        font-family: "HeliosCond";
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        @include adaptiveValue("font-size", 120, 40);
+    }
+    // .hero__desc
+    &__desc {
+        color: #fff;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: toRem(16);
+        @include adaptiveValue("font-size", 20, 16);
+        @include adaptiveValue("max-width", 440, 185);
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        // min-height: 100%;
+        @include adaptiveValue("height", 580, 448);
+        img {
+            width: 100%;
+            height: 100%;
+            @include adaptiveValue("max-width", 960, 231);
+        }
+    }
+}
+.cta {
+}
 //====================================================================================================
+// about
+.about {
+    @include adaptiveValue("padding-top", 220, 64);
+    @include adaptiveValue("padding-bottom", 110, 32);
+    // .about__container
+    &__container {
+    }
+    // .about__wrapper
+    &__wrapper {
+        display: flex;
+        @include adaptiveValue("gap", 64, 32);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+    }
+    // .about__img
+    &__img {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        img {
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
+        }
+    }
+    // .about__img-text
+    &__img-text {
+        position: absolute;
+        padding: toRem(24);
+        font-family: "HeliosCondLightC";
+        font-size: toRem(32);
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -1.92px;
+        text-transform: uppercase;
+        background: $blueColor;
+        bottom: toRem(-50);
+        right: toRem(-90);
+        @media (max-width: $tablet) {
+            right: toRem(18);
+        }
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    // .about__content
+    &__content {
+    }
+    // .about__title
+    &__title {
+        font-family: "HeliosCond";
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        @include adaptiveValue("font-size", 64, 36);
+    }
+    // .about__desc
+    &__desc {
+        @include adaptiveValue("margin-top", 32, 16);
+    }
+}
+
+//========================================================================================================================================================
+// statistics
+
+.statistics {
+    @include adaptiveValue("padding-top", 110, 32);
+    @include adaptiveValue("padding-bottom", 110, 32);
+    // .statistics__container
+    &__container {
+    }
+    // .statistics__wrapper
+    &__wrapper {
+        display: flex;
+        @include adaptiveValue("gap", 84, 48);
+    }
+    // .statistics__content
+    &__content {
+        max-width: toRem(400);
+        @media (max-width: $tablet) {
+            max-width: toRem(264);
+        }
+        @media (max-width: $mobile) {
+            max-width: 100%;
+        }
+    }
+    // .statistics__title
+    &__title {
+    }
+    // .statistics__desc
+    &__desc {
+        margin-top: toRem(16);
+        &:last-child {
+            margin-top: toRem(30);
+            @media (max-width: $tablet) {
+                margin-top: toRem(0);
+            }
+        }
+    }
+    // .statistics__num
+    &__num {
+        display: grid;
+        gap: toRem(16);
+    }
+    // .statistics__item
+    &__item {
+    }
+    // .statistics__item-title
+    &__item-title {
+    }
+    // .statistics__item-desc
+    &__item-desc {
+    }
+}
+
+//========================================================================================================================================================

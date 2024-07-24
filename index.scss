@@ -343,3 +343,170 @@
 }
 
 //========================================================================================================================================================
+// why
+.why {
+    @include adaptiveValue("padding-top", 110, 32);
+    @include adaptiveValue("padding-bottom", 110, 32);
+    // .why__container
+    &__container {
+    }
+    // .why__wrapper
+    &__wrapper {
+        display: flex;
+        @include adaptiveValue("gap", 64, 24);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+    }
+    // .why__img
+    &__img {
+        max-width: 100%;
+        width: 100%;
+        @media (max-width: $tablet) {
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+    // .why__content
+    &__content {
+    }
+    // .why__title
+    &__title {
+    }
+    // .why__desc
+    &__desc {
+        @include adaptiveValue("margin-top", 32, 16);
+    }
+}
+.title {
+}
+.desc {
+}
+.benefits {
+    // .benefits__wrapper
+    &__wrapper {
+        display: flex;
+        @include adaptiveValue("gap", 64, 24);
+        @include adaptiveValue("margin-top", 82, 32);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+    }
+    // .benefits__content
+    &__content {
+        max-width: toRem(553);
+        @media (max-width: $tablet) {
+            max-width: 100%;
+        }
+    }
+    // .benefits__subtitle
+    &__subtitle {
+        font-family: "HeliosCond";
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        @include adaptiveValue("font-size", 40, 24);
+    }
+    // .benefits__desc
+    &__desc {
+        @include adaptiveValue("margin-top", 32, 16);
+    }
+    // .benefits__slider
+    &__slider {
+    }
+    // .benefits__img
+    &__img {
+        max-width: toRem(553);
+        width: 100%;
+        position: relative;
+        @include adaptiveValue("height", 462, 309);
+        @media (max-width: $tablet) {
+            max-width: 100%;
+        }
+        img {
+            &:nth-child(1) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @media (max-width: $mobile) {
+                    width: 100%;
+                    height: toRem(310);
+                }
+            }
+            &:nth-child(2) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                @media (max-width: $mobile) {
+                    display: none;
+                }
+            }
+            &:nth-child(3) {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @media (max-width: $mobile) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// slider
+/* Стилі для пагінації */
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 0.2px;
+    background: #d9d9d9;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin: 0 toRem(4);
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #979696;
+}
+//  custom
+.benefits {
+    // .benefits__slider
+    &__slider {
+        margin-top: toRem(64);
+    }
+    // .benefits__wrapper
+    &__wrapper {
+    }
+    // .benefits__slide
+    &__slide {
+    }
+}
+.swiper-pagination {
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}
+
+//========================================================================================================================================================

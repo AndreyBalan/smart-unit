@@ -474,7 +474,7 @@
     background: #d9d9d9;
     cursor: pointer;
     transition: opacity 0.3s;
-    margin: 0 toRem(4);
+    margin-right: toRem(12);
 }
 
 .swiper-pagination-bullet-active {
@@ -485,16 +485,30 @@
 .benefits {
     // .benefits__slider
     &__slider {
-        margin-top: toRem(64);
+        margin-top: toRem(0);
     }
     // .benefits__wrapper
     &__wrapper {
     }
     // .benefits__slide
     &__slide {
+        &-subtitle {
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            @include adaptiveValue("font-size", 20, 16);
+        }
+        &-text {
+            margin-top: toRem(16);
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            @include adaptiveValue("font-size", 16, 12);
+        }
     }
 }
 .swiper-pagination {
+    margin-top: toRem(48);
 }
 .swiper {
 }
@@ -503,10 +517,32 @@
 .swiper-slide {
 }
 .swiper-button-prev {
+    font-family: "HeliosCond";
+    font-size: toRem(24);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    margin-top: toRem(32);
 }
 .swiper-button-next {
+    font-family: "HeliosCond";
+    font-size: toRem(24);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    margin-top: toRem(32);
 }
 .swiper-scrollbar {
+}
+
+.swiper__buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: toRem(16);
 }
 
 //========================================================================================================================================================

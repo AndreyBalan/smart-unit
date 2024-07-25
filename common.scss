@@ -42,32 +42,20 @@ input[type="search"]:focus {
 }
 
 // next btn
-$color: #111;
-$primary: #ffab9d;
+
 a {
     text-decoration: none;
     color: inherit;
 }
-.cta {
+.cta,
+.cta-prev {
     position: relative;
     margin: auto;
     padding: toRem(18) toRem(22);
-    padding-left: toRem(0);
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
     @include adaptiveValue("margin-top", 64, 32);
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: block;
-        border-radius: 100%;
-        width: toRem(64);
-        height: toRem(64);
-        transition: all 0.3s ease;
-    }
     span {
         position: relative;
         vertical-align: middle;
@@ -85,13 +73,11 @@ a {
     svg {
         position: relative;
         top: 0;
-        margin-left: toRem(20);
         fill: none;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke: $color;
+        stroke: $mainColor;
         stroke-width: 2;
-        transform: translateX(-5px);
         transition: all 0.3s ease;
         stroke: #191c1c;
         width: toRem(62);
@@ -111,6 +97,43 @@ a {
     }
     &:active {
         transform: scale(0.96);
+    }
+}
+.cta {
+    padding-left: toRem(0);
+    svg {
+        margin-left: toRem(20);
+        transform: translateX(-5px);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        border-radius: 100%;
+        width: toRem(64);
+        height: toRem(64);
+        transition: all 0.3s ease;
+    }
+}
+
+.cta-prev {
+    padding-right: toRem(0);
+    svg {
+        margin-right: toRem(20);
+        transform: translateX(5px);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 100%;
+        width: toRem(64);
+        height: toRem(64);
+        transition: all 0.3s ease;
     }
 }
 //========================================================================================================================================================

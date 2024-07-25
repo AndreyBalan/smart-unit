@@ -13,19 +13,32 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border: 1px solid $blueColor;
+    border-bottom: 1px solid $mainColor;
+}
+input[type="email"]:focus {
+    border-bottom: 1px solid $mainColor;
+    outline: none;
 }
 input[type="search"] {
     outline: none;
 }
 
 input[type="search"]:focus {
-    border: 1px solid $blueColor;
+    border-bottom: 1px solid $mainColor;
+}
+
+//
+
+body {
+    background-color: #f9f9f9;
 }
 // Помилки валідації
 .form__error {
-    color: red !important;
-    margin-top: toRem(2);
+    color: #db3d3d !important;
+    font-size: toRem(10);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 // screen reader

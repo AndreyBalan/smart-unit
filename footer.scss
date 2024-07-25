@@ -1,3 +1,19 @@
 //====================================================================================================
+.footer {
+    background: #191c1c;
+    padding: toRem(14) toRem(0);
+    text-align: center;
+    // .footer__container
+    &__container {
+    }
+    // .footer__copyright
+    &__copyright {
+        color: #fff;
+        font-size: toRem(16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
 
 //====================================================================================================

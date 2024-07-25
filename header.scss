@@ -14,6 +14,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: toRem(40);
         // @include adaptiveValue("padding-top", 16, 8);
         // @include adaptiveValue("padding-bottom", 16, 8);
     }
@@ -22,6 +23,7 @@
         display: flex;
         gap: toRem(16);
         margin-left: toRem(80);
+
         a {
             color: #fff;
             // font-size: toRem(20);

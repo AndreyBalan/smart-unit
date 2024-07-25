@@ -80,8 +80,12 @@ a {
         text-decoration-line: underline;
         text-transform: uppercase;
     }
+
     span.white {
         color: #fff;
+    }
+    span.helvetica {
+        font-family: "Helvetica";
     }
     svg {
         position: relative;
@@ -170,4 +174,8 @@ a {
     @media (max-width: $mobile) {
         font-weight: 500;
     }
+}
+
+.helvetica {
+    font-family: "Helvetica" !important;
 }

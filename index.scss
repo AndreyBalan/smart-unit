@@ -169,6 +169,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         gap: toRem(18);
         background: $blueColor;
         &:first-child {

@@ -486,12 +486,17 @@
     // .benefits__slider
     &__slider {
         margin-top: toRem(0);
+        &-wrapper {
+            gap: toRem(0);
+            margin-top: toRem(64);
+        }
     }
     // .benefits__wrapper
     &__wrapper {
     }
     // .benefits__slide
     &__slide {
+        margin-top: toRem(16);
         &-subtitle {
             font-style: normal;
             font-weight: 700;

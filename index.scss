@@ -235,6 +235,7 @@
     // .services__item
     &__item {
         position: relative;
+        // border-bottom: 1px solid $mainColor;
     }
     // .services__subtitle
     &__subtitle {
@@ -498,6 +499,9 @@
     // .benefits__slide
     &__slide {
         margin-top: toRem(16);
+        @media (max-width: $mobile) {
+            margin-top: toRem(32);
+        }
         &-subtitle {
             font-style: normal;
             font-weight: 700;
@@ -570,7 +574,8 @@
     }
     // .contact__information
     &__information {
-        max-width: toRem(360);
+        max-width: toRem(334);
+        width: 100%;
         @media (max-width: $tablet) {
             max-width: 100%;
             width: 100%;
@@ -579,6 +584,19 @@
             max-width: 100%;
             height: 300px;
             width: 100%;
+        }
+        img {
+            &:nth-child(1) {
+                @media (max-width: $tablet) {
+                    display: none;
+                }
+            }
+            &:nth-child(2) {
+                display: none;
+                @media (max-width: $tablet) {
+                    display: block;
+                }
+            }
         }
     }
     // .contact__subtitle
@@ -589,7 +607,7 @@
         line-height: normal;
         text-transform: uppercase;
         margin-top: toRem(32);
-        @include adaptiveValue("font-size", 28, 36);
+        @include adaptiveValue("font-size", 26, 36);
     }
     &__items {
         margin-top: toRem(32);

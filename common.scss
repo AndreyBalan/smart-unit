@@ -79,6 +79,9 @@ a {
         line-height: normal;
         text-decoration-line: underline;
         text-transform: uppercase;
+        @media (max-width: $mobileSmall) {
+            font-size: toRem(18);
+        }
     }
 
     span.white {
